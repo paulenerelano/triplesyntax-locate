@@ -1,1 +1,1 @@
-web: python paupausiopao/manage.py runserver paupausiopao.herokuapp.com/:$PORT
+web: python paupausiopao/manage.py runserver paupausiopao.herokuapp.com:$PORT
