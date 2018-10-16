@@ -16,11 +16,8 @@ Including another URLconf
 
 from django.urls import path
 
-from bnes.views.dashboard import *
+from testmap.views.dashboard import *
 
 urlpatterns = [
-	path(r'dashboard/', DashboardView.as_view(), name='dashboard'),
-	path('dashboard/<int:floor_id>/', DashboardView.as_view(), name='monitor_floor'),
-	path(r'dashboard/add_floor_plan/', DashboardView.as_view(), name='add_floor'),
-    path('dashboard/test/', DashboardView.testjsonresponse)
-] 
+	path(r'dashboard/', DashboardView.as_view(), name='dashboard')
+]

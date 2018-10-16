@@ -1,1 +1,1 @@
-default_app_config = 'bnes.apps.BnesConfig'
+default_app_config = 'testmap.apps.TestmapConfig'
