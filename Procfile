@@ -1,1 +1,1 @@
-web: python paupausiopao/manage.py runserver 0.0.0.0:8080
+web: gunicorn paupausiopao.wsgi -b 0.0.0.0:$PORT -w 10
