@@ -1,0 +1,10 @@
+{% extends "../layout/base.html" %}
+{% load static from staticfiles %}
+
+
+{% block content %}
+<div id="map-container" style="position:relative;">
+      <img src="{{ MEDIA_URL }}{{ floor_plan.image.url }}" style="position:relative;height:700px;">
+</div>
+<h1>{{ floor_plan.name }}</h1>
+{% endblock content %}
