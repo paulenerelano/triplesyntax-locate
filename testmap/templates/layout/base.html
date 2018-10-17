@@ -39,7 +39,7 @@
     </a>
 </nav>
 <div class="container-fluid">
-    <div class="row pt-5" style="position:relative;margin-left: 17%;margin-top: 1%;">
+    <div class="row pt-5" style="position:relative;margin-left: -1%;margin-top: 0%;">
       <!-- <nav class="col-md-2 d-none d-md-block bg-light sidebar">
           <div class="sidebar-sticky">
               <ul class="nav flex-column">
@@ -94,18 +94,6 @@
 
 	L.marker([51.5, -0.09]).addTo(mymap)
 		.bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
-
-	L.circle([51.508, -0.11], 500, {
-		color: 'red',
-		fillColor: '#f03',
-		fillOpacity: 0.5
-	}).addTo(mymap).bindPopup("I am a circle.");
-
-	L.polygon([
-		[51.509, -0.08],
-		[51.503, -0.06],
-		[51.51, -0.047]
-	]).addTo(mymap).bindPopup("I am a polygon.");
 
 
 	var popup = L.popup();
