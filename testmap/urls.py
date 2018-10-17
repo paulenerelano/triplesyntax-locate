@@ -19,5 +19,6 @@ from django.urls import path
 from testmap.views.dashboard import *
 
 urlpatterns = [
-	path(r'dashboard/', DashboardView.as_view(), name='dashboard')
+	path(r'dashboard/', DashboardView.as_view(), name='dashboard'),
+    path(r'push_coords/', DashboardView.push_coords)
 ]
