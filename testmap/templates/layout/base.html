@@ -82,7 +82,7 @@
 
 <script>
     $(document).ready(function(){
-    	var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+    	var mymap = L.map('mapid').setView([14, 121], 13);
 
     	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
     		maxZoom: 18,
@@ -98,7 +98,7 @@
 
         // Poll location
         var marker;
-        setTimeout(function(){
+        var poller = setTimeout(function(){
             $.ajax({
                 url: "/map/get_coords/",
                 type: "GET",
@@ -106,14 +106,16 @@
                 success: function(data) {
                     console.log(data);
 
-                    lat = parseFloat(data[0].latitude)
-                    long = parseFloat(data[0].long)
+                    lat = parseFloat(data[0].latitude);
+                    long = parseFloat(data[0].long);
+
+                    mymap = L.map('mapid').setView([lat, long], 13);
                     marker = L.marker([lat, long]).addTo(mymap)
                         .bindPopup("<b>Hi! I'm triplesyntax.").openPopup();
 
                 }
             })
-        }, 5000);
+        }, 3000);
 
     });
 
