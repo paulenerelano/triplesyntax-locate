@@ -106,10 +106,11 @@
                 success: function(data) {
                     console.log(data);
 
-                    // marker = L.marker([data[0].long, data[0].lat]).addTo(mymap)
-                    //     .bindPopup("<b>Hi! I'm triplesyntax.").openPopup();
-                    marker = L.marker([14.61, 121.07]).addTo(mymap)
+                    lat = parseFloat(data[0].lat)
+                    long = parseFloat(data[0].long)
+                    marker = L.marker([data[0].long, data[0].lat]).addTo(mymap)
                         .bindPopup("<b>Hi! I'm triplesyntax.").openPopup();
+
                 }
             })
         }, 5000);
