@@ -34,7 +34,7 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'testmap',
-    'corsheaders'
+    'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -131,7 +131,7 @@ STATICFILES_DIRS = (
 
 # Cross Origin Resource Sharing
 CORS_ORIGIN_ALLOW_ALL = True
-# 
+#
 # CORS_ALLOW_METHODS = (
 #     'GET',
 #     'POST',
