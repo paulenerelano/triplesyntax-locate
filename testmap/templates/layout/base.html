@@ -109,9 +109,11 @@
                     lat = parseFloat(data[0].latitude);
                     long = parseFloat(data[0].long);
 
-                    mymap = L.map('mapid').setView([lat, long], 13);
+                    // mymap = L.map('mapid').setView([lat, long], 13);
+
                     marker = L.marker([lat, long]).addTo(mymap)
                         .bindPopup("<b>Hi! I'm triplesyntax.").openPopup();
+                    mymap.panTo([lat, long])
 
                 }
             })
