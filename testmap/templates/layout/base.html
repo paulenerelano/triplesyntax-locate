@@ -108,7 +108,7 @@
 
                     lat = parseFloat(data[0].latitude)
                     long = parseFloat(data[0].long)
-                    marker = L.marker([long, lat]).addTo(mymap)
+                    marker = L.marker([lat, long]).addTo(mymap)
                         .bindPopup("<b>Hi! I'm triplesyntax.").openPopup();
 
                 }
