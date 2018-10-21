@@ -106,7 +106,7 @@
                 success: function(data) {
                     console.log(data);
 
-                    marker = L.marker([data.long, data.lat]).addTo(mymap)
+                    marker = L.marker([data[0].long, data[0].lat]).addTo(mymap)
                         .bindPopup("<b>Hi! I'm triplesyntax.").openPopup();
                 }
             })
