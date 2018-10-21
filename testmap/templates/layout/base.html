@@ -119,7 +119,7 @@
                     long = parseFloat(data[0].long);
 
                     // mymap = L.map('mapid').setView([lat, long], 13);
-                    mymap.removeLayer(marker);
+                    mymap.removeLayer(marker); 
                     marker = L.marker([lat, long], {icon:tripleicon}).addTo(mymap);
                     mymap.setView([lat, long], 17)
 
