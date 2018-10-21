@@ -6,7 +6,7 @@ from django.views import View
 from django.views.decorators.csrf import csrf_exempt
 import json
 
-# from testmap.models.userlocation import UserLocation
+from testmap.models.userlocation import UserLocation
 
 class DashboardView(View):
 
