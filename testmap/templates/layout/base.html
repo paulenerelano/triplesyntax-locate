@@ -101,9 +101,9 @@
         var tripleicon = L.icon({
             iconUrl: "{% static 'img/tripleicon.png' %}",
 
-            iconSize:     [486, 353], // size of the icon
-            iconAnchor:   [190, 171], // point of the icon which will correspond to marker's location
-            popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+            iconSize:     [81, 56], // size of the icon
+            iconAnchor:   [39, 45], // point of the icon which will correspond to marker's location
+            popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
         });
 
 
@@ -120,8 +120,7 @@
 
                     // mymap = L.map('mapid').setView([lat, long], 13);
 
-                    marker = L.marker([lat, long]).addTo(mymap)
-                        .bindPopup("<b>Hi! I'm triplesyntax.").openPopup();
+                    marker = L.marker([lat, long], {icon:tripleicon}).addTo(mymap);
                     mymap.setView([lat, long], 17)
 
                 }
