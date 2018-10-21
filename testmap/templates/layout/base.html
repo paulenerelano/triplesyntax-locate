@@ -115,7 +115,7 @@
 
                     marker = L.marker([lat, long]).addTo(mymap)
                         .bindPopup("<b>Hi! I'm triplesyntax.").openPopup();
-                    mymap.panTo([lat, long])
+                    mymap.setView([lat, long], 15)
 
                 }
             })
