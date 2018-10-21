@@ -106,9 +106,9 @@
                 success: function(data) {
                     console.log(data);
 
-                    lat = parseFloat(data[0].lat)
+                    lat = parseFloat(data[0].latitude)
                     long = parseFloat(data[0].long)
-                    marker = L.marker([data[0].long, data[0].lat]).addTo(mymap)
+                    marker = L.marker([long, lat]).addTo(mymap)
                         .bindPopup("<b>Hi! I'm triplesyntax.").openPopup();
 
                 }
