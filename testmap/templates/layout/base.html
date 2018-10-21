@@ -98,7 +98,9 @@
 
         // Poll location
         var marker;
-        var poller = setTimeout(function(){
+
+
+        function updateMap(){
             $.ajax({
                 url: "/map/get_coords/",
                 type: "GET",
@@ -117,7 +119,9 @@
 
                 }
             })
-        }, 3000);
+        }
+
+        setInterval(updateMap, 3000);
 
     });
 
