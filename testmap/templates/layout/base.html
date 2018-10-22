@@ -82,7 +82,7 @@
 
 <script>
     $(document).ready(function(){
-    	var mymap = L.map('mapid').setView([14, 121], 13);
+    	var mymap = L.map('mapid');
 
     	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
     		maxZoom: 18,
@@ -97,7 +97,6 @@
     	// var popup = L.popup();
 
         // Poll location
-        var marker;
         var tripleicon = L.icon({
             iconUrl: "{% static 'img/tripleicon.png' %}",
 
@@ -105,7 +104,8 @@
             iconAnchor:   [39, 45], // point of the icon which will correspond to marker's location
             popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
         });
-
+        var marker = L.marker([1,1], 20);
+        mymap.setView([121.07, 14.61], 20);
 
         function updateMap(){
             $.ajax({
@@ -119,9 +119,11 @@
                     long = parseFloat(data[0].long);
 
                     // mymap = L.map('mapid').setView([lat, long], 13);
-                    mymap.removeLayer(marker); // test 2
+                    if (marker != null){
+                        mymap.removeLayer(marker); // test 2
+                    }
                     marker = L.marker([lat, long], {icon:tripleicon}).addTo(mymap);
-                    mymap.setView([lat, long], 17)
+                    mymap.setView([lat, long], 20)
 
                 }
             })
