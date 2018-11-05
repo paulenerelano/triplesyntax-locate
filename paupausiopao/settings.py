@@ -136,3 +136,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 #     'GET',
 #     'POST',
 # )
+CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_WHITELIST = (
+    '180.190.115.210:443' # Here was the problem indeed and it has to be http://localhost:3000, not http://localhost:3000/
+)
