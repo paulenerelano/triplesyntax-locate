@@ -130,13 +130,27 @@ STATICFILES_DIRS = (
 )
 
 # Cross Origin Resource Sharing
-CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_ALLOW_ALL = True
 #
-# CORS_ALLOW_METHODS = (
-#     'GET',
-#     'POST',
-# )
+CORS_ALLOW_METHODS = (
+    'POST',
+)
 CORS_ALLOW_CREDENTIALS = True
-CORS_ORIGIN_WHITELIST = (
-    '180.190.115.210:443' # Here was the problem indeed and it has to be http://localhost:3000, not http://localhost:3000/
+CORS_ORIGIN_WHITELIST = ( # Here was the problem indeed and it has to be http://localhost:3000, not http://localhost:3000/
+    '127.0.0.1:8000',
+    'paupausiopao.herokuapp.com',
+    null,
+)
+
+CORS_ALLOW_HEADERS = (
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+    'x-csrf-token'
 )
