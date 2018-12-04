@@ -139,7 +139,7 @@ CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_WHITELIST = ( # Here was the problem indeed and it has to be http://localhost:3000, not http://localhost:3000/
     '127.0.0.1:8000',
     'paupausiopao.herokuapp.com',
-    null,
+    'null',
 )
 
 CORS_ALLOW_HEADERS = (
