@@ -37,7 +37,7 @@ sphinx-me==0.3
 thinc==6.10.3
 toolz==0.9.0
 tqdm==4.24.0
-Twisted==18.7.0
+Twisted==19.7.0
 txaio==18.7.1
 ujson==1.35
 urllib3==1.23
