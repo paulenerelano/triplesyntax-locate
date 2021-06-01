@@ -40,7 +40,7 @@ tqdm==4.24.0
 Twisted==18.7.0
 txaio==18.7.1
 ujson==1.35
-urllib3==1.23
+urllib3==1.26.5
 whitenoise==4.1
 wrapt==1.10.11
 xmltodict==0.11.0
